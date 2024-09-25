@@ -22,10 +22,14 @@
   src: url(../webfonts/HanwhaGothicT.woff2) format("woff2");
 }
 @font-face {
+  font-family: hanwhagothicR;
+  src: url(../webfonts/HanwhaGothicR.woff2) format("woff2");
+}
+@font-face {
   font-family: hanwhaL;
   src: url(../webfonts/HanwhaL.woff2) format("woff2");
 }
-body{height: auto;}
+body{height: auto; background: #000;}
 ul{list-style: none;}
 a{text-decoration: none;}
 #bg{background: url(../images/bg_header_eagles.jpg) no-repeat 50% 50%; width: 100%; height: 1082px; background-attachment: fixed;}
@@ -81,25 +85,77 @@ a{text-decoration: none;}
 #bg header ul:hover > li:nth-child(5):hover ~ .bg{opacity: 0;} 
 #bg header ul:hover > li:nth-child(6):hover ~ .bg{opacity: 0;}
 
+
+
 #wrap .snsIcon{position: absolute; right: 50px; top: 300px; z-index: 2;}
 #wrap .snsIcon p{width: 76px; height: 76px; margin-bottom: 5px; background: #000; border-radius: 50%; border: 3px solid transparent;}
 #wrap .snsIcon p:hover{border: 3px solid #f37321;}
 
-.menu{position: relative;}
-.menu::before{
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 1px;
-  background: #707070;
-}
-ul.intro{position: absolute; bottom: 0; left: 0; width: 1240px; height: 80px; display: flex; margin: 0 auto; justify-content: center; align-items: center; gap: 50px;}
+
+.main{position: relative; width: 1240px; padding-top: 160px; margin: -400px auto 0; padding-bottom: 230px;}
+.gradient{position: absolute; left: 0; bottom: -129px; width: 100%; height: 450px; background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.53) 35%, #000000);}
+
+/* scroll fixed 넣기 */
+.main .intro.on{position: fixed; top: 0; width: 100%; height: 80px;}
+
+ul.intro{position: absolute; top: 0; left: 0; width: 1240px; height: 80px; display: flex; margin: 0 auto; align-items: center; gap: 50px;}
+ul.intro::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background-color: #707070;
+  }
 ul.intro li{}
-ul.intro li a{display: block; position: relative; padding: 0 1px; border: 2px solid transparent; font-family: hanwhagothicEL; font-size: 18px; line-height: 80px; color: #fff;}
+ul.intro li a{display: block; position: relative; padding: 0 1px; border: 2px solid transparent; font-family: hanwhagothicEL; font-size: 18px; line-height: 80px; color: #b3b3b3; overflow: hidden;}
+ul.intro li a:hover{color: #fff;}
+ul.intro li a::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transition: 0.3s;
+  }
+ul.intro li a.on::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transition: 0.3s;
+  }
+ul.intro li a:hover:before{
+    left: 0;
+  }
+
+.main > h1{font-size: 60px; color: #fff; font-family: hanwhagothicR; font-weight: normal; margin-bottom: 70px;}
+.main > h1 span{font-family: hanwhaR;}
+
+.main .flex{display: flex; width: 100%; margin-top: 120px;}
+
+.main ul.subIntro{width: 280px;}
+.main ul.subIntro li{padding: 4px 0;}
+.main ul.subIntro li a{color: #808080; font-family: myriadR;}
+.main ul.subIntro li a:hover{color: #fff;}
+
+.main .dep{background: #000; width: 920px;}
+.main .dep > p{padding-left: 200px; width: 100%;}
+.main .dep > p img{vertical-align: middle;}
+.main .dep .txt{color: #fff;}
+.main .dep .txt h1{font-size: 32px; margin-bottom: 30px; font-weight: normal; line-height: 1.31; font-family: hanwhagothicT; margin-top: 100px;}
+.main .dep .txt h1 span{font-family: hanwhaR;}
+.main .dep .txt > strong{font-family: hanwhaR; font-weight: normal;}
+.main .dep .txt p{color: #808080; font-size: 14px; line-height: 1.57; word-break: keep-all; word-wrap: break-word; font-family: hanwhagothicT;}
+.main .dep .txt p span{font-family: hanwhaL;}
 
 
-.main{background: #000;}
 
 
 footer{width: 100%; height: 230px; display: flex; justify-content: space-between; 
