@@ -70,7 +70,7 @@ a{text-decoration: none;}
   background: rgba(0, 0, 0, 0.8); opacity: 0; transition: 0.5s;}
 #wrap header p{position: absolute; right: 0; padding: 43px 30px 0 0; }
 #wrap header p a{padding-top: 20px; display: inline-block; color: #666; padding: 3px 8px 3px;
-  font-size: 18px; font-family: myriadR; position: relative; font-weight: bold;}
+  font-size: 18px; font-family: myriadR; position: relative;}
 #wrap header p a:hover{color: #fff;} 
 #wrap header p a:first-child::after{
   content: "";
