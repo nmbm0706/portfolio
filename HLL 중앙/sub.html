@@ -7,6 +7,14 @@
   <title>회사소개 | HLL중앙</title>
   <link rel="stylesheet" href="css/styleSub.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>
+    $(function(){
+      $(".footLast p").click(function(){
+        $(".familySiteButton").toggleClass("on");
+      });
+    });
+  </script>
 </head>
 <body>
   <header>
@@ -186,6 +194,23 @@
     </div>
     <div class="footLast">
       <p>Family Site<span></span></p>
+    </div>
+    <div class="familySiteButton">
+      <div class="inner">
+        <div class="left">
+          <p>FAMILY</p>
+        </div>
+        <ul class="right">
+          <li><a href="#">ELLE</a></li>
+          <li><a href="#">COSMOPOLITAN</a></li>
+          <li><a href="#">Harper's BAZAAR</a></li>
+          <li><a href="#">ESQUIRE</a></li>
+          <li><a href="#">ELLEVOICE</a></li>
+          <li><a href="#">예술산책</a></li>
+          <li><a href="#">eee</a></li>
+          <li><a href="#">통합멤버십</a></li>
+        </ul>
+      </div>
     </div>
   </footer>
 

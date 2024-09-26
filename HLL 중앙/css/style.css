@@ -27,6 +27,28 @@ header .inner > ul > li > p::after{
   transform: translateX(-100%);
   transition: 0.4s;
 }
+header .inner > ul > li > p.on::after{
+  content: "";
+  position: absolute;
+  bottom: 10px; 
+  left: 0; 
+  width: 100px;
+  height: 2px;
+  background: #000;
+  transform: translateX(-100%);
+  transition: 0.4s;
+}
+header .inner > ul > li > p.on1::before{
+  content: "";
+  position: absolute;
+  bottom: 10px; 
+  left: 0; 
+  width: 100px;
+  height: 2px;
+  background: #fff;
+  transform: translateX(-100%);
+  transition: 0.4s;
+}
 header .inner > ul > li:hover > p::after{
   transform: translateX(0);
 }
@@ -151,7 +173,7 @@ header .inner > ul > li ul li:last-child{margin-bottom: 0;}
 }
 .s9 .footerInner span:last-child{margin-left: 20px;}
 
-footer{width: 100%; max-width: 1915px; margin: 0 auto;}
+footer{width: 100%; max-width: 1915px; margin: 0 auto; overflow: hidden;}
 footer .footTop{width: 100%; border-top: 1px solid #dbdbdb; border-bottom: 1px solid #dbdbdb;}
 footer .list{display: flex; padding: 21px 0; justify-content: flex-start; gap: 8px 32px; width: 1200px; color: #666; font-weight: 500; margin: 0 auto;}
 footer .list li{cursor: pointer;}
@@ -175,8 +197,8 @@ footer .footCenter .txt span:nth-child(2):after,footer .footCenter .txt span:nth
 }
 footer .footCenter .txt p{font-size: 14px; margin-top: 12px; color: #666;}
 
-footer .footLast{height: 64px; border-top: 1px solid #dbdbdb; width: 100%; display: flex; justify-content: center; align-items: center;}
-footer .footLast p{font-family: mainfont; color: #666; cursor: pointer;}
+footer .footLast{height: 64px; border-top: 1px solid #dbdbdb; width: 100%; display: flex; justify-content: center; align-items: center; position: relative; z-index: 999; background: #fff;}
+footer .footLast > p{font-family: mainfont; color: #666; cursor: pointer; z-index: 999;}
 footer .footLast span{position: relative;}
 footer .footLast span::after{
   content: "";
@@ -191,3 +213,11 @@ footer .footLast span::after{
   top: 50%;
   transform: translateY(-50%);
 }
+
+.familySiteButton{width: 100%; padding: 60px 0; position: absolute; bottom: -55px; left: 0; background: #f7f7f7; height: 0; overflow: hidden; transition: 0.5s;}
+.familySiteButton.on{bottom: 65px; height: 70px;}
+.familySiteButton .inner{width: 1280px; margin: 0 auto; display: flex; padding: 0 40px; justify-content: space-around;}
+.familySiteButton .inner .left > p{color: #000; font-size: 20px; font-family: mainfont;}
+.familySiteButton .inner .right{width: 900px; display: flex; flex-wrap: wrap;}
+.familySiteButton .inner .right li{width: 25%; margin-bottom: 10px; }
+.familySiteButton .inner .right li a{cursor: pointer; display: inline-block; color: #666; font-weight: 500;}

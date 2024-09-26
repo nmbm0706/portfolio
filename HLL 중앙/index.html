@@ -17,6 +17,9 @@
   <!-- <link rel="fullPage.js-2.9.7/examples/examples.css"> -->
   <script>
     $(function(){
+      $(".footLast p").click(function(){
+        $(".familySiteButton").toggleClass("on");
+      });
       $("#fullpage").fullpage({
 				// verticalCentered: true,
         scrollingSpeed: 800,
@@ -38,13 +41,20 @@
                 '<img src="images/HLLlogoSmall.svg" alt="HLLlogoSmall">'
               );
               $("header").css("background", "#fff");
-              $(".inner > ul p").css("color", "#000");
+              $("header .inner > ul a").css("color", "#000");
+              $("header .inner > ul > li > p").css("color", "#000");
+              $(".inner > ul > p").css("color", "#000");
+              $("header .inner > ul > li > p").addClass("on");
             } else {
 							$(".inner .logo").html(
                 '<img src="images/HLLlogoSmallWhite.svg" alt="logosmall">'
               );
               $("header").css("background", "transparent");
-              $(".inner > ul p").css("color", "#fff");
+              $("header .inner > ul > li > p").css("color", "#fff");
+              $("header .inner > ul a").css("color", "#fff");
+              $(".inner > ul > p").css("color", "#fff");
+              // $("header .inner > ul > li > p").addClass("on1");
+              // 풀페이지 바뀌었다가 다시 돌아왔을 때 영상페이지 메뉴 후버 고치기
             }
           },
 			});
@@ -283,6 +293,23 @@
         </div>
         <div class="footLast">
           <p>Family Site<span></span></p>
+        </div>
+        <div class="familySiteButton">
+          <div class="inner">
+            <div class="left">
+              <p>FAMILY</p>
+            </div>
+            <ul class="right">
+              <li><a href="#">ELLE</a></li>
+              <li><a href="#">COSMOPOLITAN</a></li>
+              <li><a href="#">Harper's BAZAAR</a></li>
+              <li><a href="#">ESQUIRE</a></li>
+              <li><a href="#">ELLEVOICE</a></li>
+              <li><a href="#">예술산책</a></li>
+              <li><a href="#">eee</a></li>
+              <li><a href="#">통합멤버십</a></li>
+            </ul>
+          </div>
         </div>
       </footer>
     <!-- </div>
