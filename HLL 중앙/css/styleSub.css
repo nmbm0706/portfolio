@@ -16,18 +16,18 @@ header .inner > ul{display: flex; justify-content: center; width: 100%; max-widt
 header .inner > ul > li{position: relative;}
 header .inner > ul > li > p{position: relative; color: #000; margin: 0 32px; padding: 25px 0; font-family: mainfont; text-transform: uppercase; cursor: pointer; overflow: hidden; display: inline-block;}
 header .inner > ul > li >  p a{position: relative; color: #000;font-family: mainfont; text-transform: uppercase; cursor: pointer; overflow: hidden; display: inline-block;}
-header .inner > ul > li p::after{
+header .inner > ul > li > p::after{
   content: "";
   position: absolute;
   bottom: 10px; 
   left: 0; 
   width: 100px;
   height: 2px;
-  background: #fff;
+  background: #000;
   transform: translateX(-100%);
   transition: 0.4s;
 }
-header .inner > ul > li:hover p::after{
+header .inner > ul > li:hover > p::after{
   transform: translateX(0);
 }
 header .inner > ul > li ul{background: #fff; padding: 16px; color: #666; display: none; font-weight: 500; position: absolute; top: 73px; left: 10px; filter: drop-shadow(0px 1px 8px rgba(0, 0, 0, 0.08)); }
@@ -37,9 +37,29 @@ header .inner > ul > li ul li:hover{color: #211955; cursor: pointer;}
 header .inner > ul > li ul li:last-child{margin-bottom: 0;}
 
 
-.main1{width: 100%; padding: 120px 0 180px; background: #111; display: flex; flex-direction: column; align-items: center;}
-.main1 img{vertical-align: middle;}
+.main1{width: 100%; padding: 120px 0 180px; background: #111;}
+.main1 img{vertical-align: middle; margin-bottom: 28px;}
 .main1 h1{width: 1200px; font-size: 48px; color: #fff; margin: 0 auto;}
 
-.main1 .con1{padding-top: 120px;}
-.main1 .con2{}
+.main1 .con{padding-top: 120px; width: 1200px; margin: 0 auto; color: #fff;}
+.main1 .con h3{font-size: 24px; margin-bottom: 16px; font-weight: 700;}
+.main1 .con p{font-size: 18px; font-weight: 500;}
+
+.main1 .sub2{display: flex; flex-direction: column; align-items: flex-end;}
+.main1 .sub2 .wrap{width: 58.5%;}
+.main1 .sub2 img{width: 690px; object-fit: cover;}
+.main1 .sub2 .txt{margin-right: 20px;}
+
+
+.main2{width: 100%; padding: 180px 0; background: #f5f5fd;}
+.main2 h1{width: 1200px; font-size: 36px; color: #211955; margin: 0 auto;}
+.main2 .txt{width: 690px; margin: 0 auto; padding-left: 510px; font-size: 18px; color: #111;}
+.main2 .txt p{margin-top: 26px; font-weight: 500;}
+
+.main2 .moveBrand{width: auto; height: 92px; display: flex; align-items: center; justify-content: space-between; background: #fff; margin-top: 100px;}
+.main2 .moveBrand li{padding: 0 46px; width: auto;}
+.main2 .moveBrand li img{vertical-align: middle; object-fit: cover;}
+
+
+.main3{width: 100%; padding: 180px 0;}
+.main3 .dep1{width: 1200px; }

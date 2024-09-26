@@ -16,7 +16,7 @@ header .inner > ul{display: flex; justify-content: center; width: 100%; max-widt
 header .inner > ul > li{position: relative;}
 header .inner > ul > li > p{position: relative; color: #fff; margin: 0 32px; padding: 25px 0; font-family: mainfont; text-transform: uppercase; cursor: pointer; overflow: hidden; display: inline-block;}
 header .inner > ul > li >  p a{position: relative; color: #fff;font-family: mainfont; text-transform: uppercase; cursor: pointer; overflow: hidden; display: inline-block;}
-header .inner > ul > li p::after{
+header .inner > ul > li > p::after{
   content: "";
   position: absolute;
   bottom: 10px; 
@@ -27,7 +27,7 @@ header .inner > ul > li p::after{
   transform: translateX(-100%);
   transition: 0.4s;
 }
-header .inner > ul > li:hover p::after{
+header .inner > ul > li:hover > p::after{
   transform: translateX(0);
 }
 header .inner > ul > li ul{background: #fff; padding: 16px; color: #666; display: none; font-weight: 500; position: absolute; top: 73px; left: 10px; filter: drop-shadow(0px 1px 8px rgba(0, 0, 0, 0.08)); }

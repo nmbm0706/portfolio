@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @font-face {
+    font-family: 'SF_HambakSnow';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/SF_HambakSnow.woff') format('woff');
+    }
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    a{text-decoration: none;}
+    body > p{position: fixed; z-index: 2; top: -55px;}
+    header{width: 100%; max-width: 1903px; height:80px; background: #000; display: flex; 
+      position: sticky; top: 0; text-align: center; justify-content: center; z-index: 1;}
+    header p{display: flex; padding-left: 30px; position: absolute; left: 0;}
+    header p a{line-height: 70px;}
+    header p span{color: #fff; display: block; padding-top: 40px; box-sizing: border-box; 
+      font-size: 14px; margin-left: 5px;}
+    header p img{width: 126px; height: 48px; vertical-align: middle;}
+    header ul{display: flex; align-items: center; gap: 20px;}
+    header ul li a{color: #d2d2d2; display: block; height: 100%; width: 100%; position: relative;
+      transition: 0.5s;}
+    header ul li:hover a{font-weight: bold; transform: translateY(8px);}
+    header ul li a::after{
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transition: 0.5s;
+      opacity: 0;
+      width: 5px;
+      height: 5px;
+      background: #fff;
+      border-radius: 50%;
+    }
+    header ul li:hover a::after{
+      opacity: 1;
+      transform: translateY(-10px);
+    }
+    header .menu{width: 38px; display: flex; flex-direction: column; position: absolute; right: 20px; top: 43%; cursor: pointer;}
+    header .menu span{display: block; width: 100%; height: 2px; background: #fff; z-index: 999; color: #fff; margin-bottom: 10px;}
+    header .menu span:last-child{margin-bottom: 0;}
+
+    .main{display: flex;}
+
+    .main .left{width: 33%; position: sticky; height: 100vh; top: 80px; background: #f6c6b8;}
+    .main .left > h4{position: absolute; bottom: 120px; left: 0; font-size: 14px; color: #86260e;
+      padding: 0 5% 0 7%;}
+    .main .left p img{width: 100%; height: 100%; object-fit: cover;}
+
+    .main .right{flex: 1; margin: 0 auto; background: #f4f4f4;}
+    .main .right ul{display: flex; flex-direction: column; padding: 80px 5% 30px 10%; 
+      box-sizing: border-box;}
+    .main .right ul li{margin-bottom: 20px;}
+    .main .right ul li a{display: flex; align-items: center; justify-content: space-between;}
+    .main .right ul li .txt{white-space: nowrap;}
+    .main .right ul li .txt h3{color: #828282; font-size: 19px; margin-left: 110px;
+      display: inline-block; line-height: 40px; border-bottom: 1px solid #828282;}
+    .main .right ul li .txt h1{font-size: 22px; font-family: 'SF_HambakSnow'; color: #86260E;
+      margin: 25px 0 30px 110px;}
+    .main .right ul li:nth-child(even) .txt h3{margin-left: 0;}
+    .main .right ul li:nth-child(even) .txt h1{margin-left: 0;}
+    .main .right ul li:nth-child(even) .txt p {margin: 0 0 18px 93px;}
+    .main .right ul li:nth-child(even) .txt h4 {margin-left: 93px;}
+    .main .right ul li .txt h1 strong{font-size: 30px; display: block;}
+    .main .right ul li .txt p{color: #86260E; margin-bottom: 18px;}
+    .main .right ul li .txt h4{color: #808080; position: relative; display: inline-block;}
+    .main .right ul li .txt h4::before{
+      content: "";
+      position: absolute;
+      background: url(images/plus.svg);
+      width: 20px;
+      height: 100%;
+      right: -20px;
+      top: 0;
+      background-repeat: no-repeat;
+      opacity: 0.3;
+    }
+
+    @media screen and (max-width: 1200px) {
+      .main .right{padding: 80px 20px 30px;}
+      .main .right ul{padding: 0;}
+      .main .right ul li{padding: 0; width: 95%; height: 250px; margin-bottom: 20px; padding-bottom: 10px;}
+      .main .right ul li img{width: 40%;}
+      .main .right ul li:nth-child(2) img{width: 25%;}
+      .main .right ul li:nth-child(4) img{width: 35%;}
+      .main .right ul li:nth-child(5) img{width: 25%;}
+      .main .right ul li:nth-child(even) a{flex-direction: row-reverse;}
+      .main .right ul li .txt h3{margin-left: 0;}
+      .main .right ul li .txt h1{margin: 0; margin: 25px 0 30px;}
+      .main .right ul li .txt h1 strong{margin-top: 7px;}
+      .main .right ul li .txt p{margin-bottom: 18px;}
+      .main .right ul li:nth-child(even) .txt p {margin: 0;}
+      .main .right ul li:nth-child(even) .txt h4 {margin-left: 0;}
+    }
+    @media screen and (max-width: 800px) {
+      header{display: none;}
+      .main{flex-direction: column;}
+      .main .left{width: 100%; height: 100%; position: relative; top: 0;}
+      .main .left img{width: 100%;}
+      .main .left > h4{display: none;}
+
+      .main .right{padding: 30px 20px 0;}
+      .main .right ul li img{width: 25%;}
+      .main .right ul li:nth-child(2) img{width: 20%;}
+      .main .right ul li:nth-child(4) img{width: 25%;}
+      .main .right ul li:nth-child(5) img{width: 20%;}
+      .main .right ul li .txt h3{font-size: 14px; height: 31px;}
+      .main .right ul li .txt h1{margin: 10px 0 15px; font-size: 16px;}
+      .main .right ul li .txt h1 strong{margin-top: 7px; font-size: 20px;}
+      .main .right ul li .txt p{margin-bottom: 18px; font-size: 13px;}
+      .main .right ul li .txt h4{font-size: 13px;}
+      .main .right ul li:nth-child(even) .txt p{margin-bottom: 18px;}
+      .main .right ul li:nth-child(even) .txt h4{margin-left: 0;}
+      .main .right ul li .txt h4::before{
+      content: "";
+      position: absolute;
+      background: url(images/plus.svg);
+      width: 16px;
+      height: 16px;
+      right: -16px;
+      top: 2px;
+      background-size: cover;
+      }
+    }
+  </style>
+</head>
+<body>
+  <p><a href="#"><img src="images/goPart_btnsShow2204.jpg" alt="gopart"></a></p>
+  <header>
+    <p>
+      <a href="#"><img src="images/sub_list_logo.png" alt="logo"></a>
+      <span>2023 01_<strong>vol.54</strong></span>
+    </p>
+    <ul>
+      <li>
+        <a href="#">웹진 소개</a>
+      </li>
+      <li>
+        <a href="#">추천명약</a>
+      </li>
+      <li>
+        <a href="#">현상진맥</a>
+      </li>
+      <li>
+        <a href="#">그들의 이력서</a>
+      </li>
+      <li>
+        <a href="#">풍류재담</a>
+      </li>
+      <li>
+        <a href="#">연희살롱</a>
+      </li>
+    </ul>
+    <div class="menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+  <div class="main">
+    <div class="left">
+      <h4>.<br>월간 공진단은 전통공연예술진흥재단이 발행하는 웹진으로<br>전통예술에 대한 새로운 시선을 만들어 갑니다</h4>
+      <p><img src="images/2301_main_visual.gif" alt="main"></p>
+    </div>
+    <div class="right">
+      <ul>
+        <li>
+          <a href="#">
+            <div class="txt">
+              <h3>추천명약</h3>
+              <h1>
+                묵은해 보내올 제 <br>
+                <strong>새해 소원을 담아</strong>
+              </h1>
+              <p>새해를 맞이해 새로운 목표를 세우고 싶다면?<br>명약단의 처방으로 취향을 깊게 파보자.</p>
+              <h4>자세히 보기</h4>
+            </div>
+            <img src="images/main1.png" alt="main1">
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="images/main2.png" alt="main2">
+            <div class="txt">
+              <h3>현상진맥</h3>
+              <h1>
+                전통 공연·음반 트렌드 <br>
+                <strong>2022년 회고 vs 2023년 전망</strong>
+              </h1>
+              <p>거리두기의 해제로 활기를 되찾은 전통음악계.<br>2022년 트렌드를 분석하고 2023년을 전망해본다.</p>
+              <h4>자세히 보기</h4>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="txt">
+              <h3>그들의 이력서</h3>
+              <h1>
+                점 긋고, 점 잇다 <br>
+                <strong>달음(Dal:um)</strong>
+              </h1>
+              <p>점과 점이 이어져 하나의 선이 되듯<br>가야금과 거문고, 두 사람이 만나 공명한다.</p>
+              <h4>자세히 보기</h4>
+            </div>
+            <img src="images/main3.png" alt="main3">
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="images/main4.png" alt="main4">
+            <div class="txt">
+              <h3>풍류재담</h3>
+              <h1>
+                다시, 심청가 ② 젖동냥하는 대목<br>
+                <strong>"죄송한데, 저 좀 도와주세요"</strong>
+              </h1>
+              <p>요즘 말로 다시 읽고 쓰고 보는 판소리.<br>혼자서 해결할 수 없는 문제를 만났다면?</p>
+              <h4>자세히 보기</h4>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="txt">
+              <h3>연희살롱</h3>
+              <h1>
+                눈 내리는 날 듣는 노래<br>
+                <strong>정가 보컬리스트 최여완 편</strong>
+              </h1>
+              <p>온통 하얀 세상에 첫 발자국을 남기듯,<br>눈 내리는 날 같이 듣고 싶은 플레이리스트!</p>
+              <h4>자세히 보기</h4>
+            </div>
+            <img src="images/main5.png" alt="main5">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
