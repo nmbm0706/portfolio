@@ -1,0 +1,150 @@
+@charset "utf-8";
+
+
+@font-face {
+  font-family: 'SF_HambakSnow';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/SF_HambakSnow.woff') format('woff');
+  }
+  *{margin: 0; padding: 0;}
+  ul{list-style: none;}
+  a{text-decoration: none;}
+  body{height: auto;}
+  body > p{position: fixed; z-index: 11; top: -55px;}
+  header{width: 100%; max-width: 1903px; height:80px; background: #000; display: flex; position: sticky; top: 0; text-align: center; justify-content: center; z-index: 10;}
+  header p{display: flex; padding-left: 30px; position: absolute; left: 0;}
+  header p a{line-height: 70px;}
+  header p span{color: #fff; display: block; padding-top: 40px; box-sizing: border-box; 
+    font-size: 14px; margin-left: 5px;}
+  header p img{width: 126px; height: 48px; vertical-align: middle;}
+  header ul{display: flex; align-items: center; gap: 20px;}
+  header ul li a{color: #d2d2d2; display: block; height: 100%; width: 100%; position: relative;
+    transition: 0.5s;}
+  header ul li:hover a{font-weight: bold; transform: translateY(8px);}
+  header ul li a::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transition: 0.5s;
+    opacity: 0;
+    width: 5px;
+    height: 5px;
+    background: #fff;
+    border-radius: 50%;
+  }
+  header ul li:hover a::after{
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+  header .menu{width: 38px; display: flex; flex-direction: column; position: absolute; right: 20px; top: 43%; cursor: pointer;}
+  header .menu span{display: block; width: 100%; height: 2px; background: #fff; z-index: 999; color: #fff; margin-bottom: 10px;}
+  header .menu span:last-child{margin-bottom: 0;}
+
+  .main{display: flex; height: auto; overflow: hidden;}
+
+  .main > .left{width: 33%; position: fixed; height: 100vh; top: 80px; background: #f6c6b8; z-index: 1; left: 0;}
+  .main > .left > h4{position: absolute; bottom: 120px; left: 0; font-size: 14px; color: #86260e;
+    padding: 0 5% 0 7%;}
+  .main > .left p img{width: 100%; height: 100%; object-fit: cover;}
+
+  .main > .right{flex: 1; margin: 0 0 0 33%; background: #f4f4f4; width: 100%; display: flex; flex-direction: column; align-items: center;}
+  .main > .right ul{display: flex; flex-direction: column; padding: 80px 8% 30px 10%; box-sizing: border-box; justify-content: flex-end; width: 100%; float: right;}
+  .main > .right ul li{margin-bottom: 20px;}
+  .main > .right ul li a{display: flex; align-items: center; justify-content: space-around; gap: 100px;}
+  .main > .right ul li .txt{white-space: nowrap;}
+  .main > .right ul li .txt h3{color: #828282; font-size: 19px; margin-left: 110px;
+    display: inline-block; line-height: 40px; border-bottom: 1px solid #828282;}
+  .main > .right ul li .txt h1{font-size: 22px; font-family: 'SF_HambakSnow'; color: #86260E;
+    margin: 25px 0 30px 110px;}
+  .main > .right ul li:nth-child(2) .txt h1, .main > .right ul li:nth-child(3) .txt h1, .main > .right ul li:nth-child(5) .txt h1{font-size: 30px;}
+  .main > .right ul li:nth-child(2) .txt h1 strong, .main > .right ul li:nth-child(3) .txt h1  strong, .main > .right ul li:nth-child(5) .txt h1  strong{font-size: 22px;}
+  .main > .right ul li:nth-child(even) .txt h3{margin-left: 0;}
+  .main > .right ul li:nth-child(even) .txt h1{margin-left: 0;}
+  .main > .right ul li:nth-child(even) .txt p {margin: 0 0 18px 93px;}
+  .main > .right ul li:nth-child(even) .txt h4 {margin-left: 93px;}
+  .main > .right ul li .txt h1 strong{font-size: 30px; display: block;}
+  .main > .right ul li .txt p{color: #86260E; margin-bottom: 18px; font-size: 16px;}
+  .main > .right ul li .txt h4{color: #808080; position: relative; display: inline-block; font-size: 16px;font-weight: normal;}
+  .main > .right ul li .txt h4::before{
+    content: "";
+    position: absolute;
+    background: url(../images/plus.svg);
+    width: 20px;
+    height: 100%;
+    right: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-repeat: no-repeat;
+  }
+
+  /* -- 공통 -- */
+  .section p:first-child{position: relative;}
+  .section p span:first-child{font-size: 13px; color: #9a9a9a;  text-transform: uppercase; display: inline-block; margin-bottom: 7px; padding-right: 14px;}
+  .section p:first-child::before{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    background: #9a9a9a;
+  }
+  /* ---------- */
+
+  .s1{width: 100%; padding: 2% 10% 3% 10%; box-sizing: border-box; display: flex; justify-content: space-between; gap: 50px;}
+  .s1 .news{width: calc(50% - 23px);}
+  .section1 .news .layer a{width: 65%; display: block; font-weight: 600; color: #202020;}
+  .section1 .news .layer a img{width: 100%;}
+
+
+
+
+
+
+  /* 반응형 */
+  @media screen and (max-width: 1200px) {
+    .main > .right{padding: 80px 20px 30px;}
+    .main > .right ul{padding: 0;}
+    .main > .right ul li{padding: 0; width: 95%; height: 250px; margin-bottom: 20px; padding-bottom: 10px;}
+    .main > .right ul li img{width: 40%;}
+    .main > .right ul li:nth-child(2) img{width: 25%;}
+    .main > .right ul li:nth-child(4) img{width: 35%;}
+    .main > .right ul li:nth-child(5) img{width: 25%;}
+    .main > .right ul li:nth-child(even) a{flex-direction: row-reverse;}
+    .main > .right ul li .txt h3{margin-left: 0;}
+    .main > .right ul li .txt h1{margin: 0; margin: 25px 0 30px;}
+    .main > .right ul li .txt h1 strong{margin-top: 7px;}
+    .main > .right ul li .txt p{margin-bottom: 18px;}
+    .main > .right ul li:nth-child(even) .txt p {margin: 0;}
+    .main > .right ul li:nth-child(even) .txt h4 {margin-left: 0;}
+  }
+  @media screen and (max-width: 800px) {
+    header{display: none;}
+    .main{flex-direction: column;}
+    .main > .left{width: 100%; height: 100%; position: relative; top: 0;}
+    .main > .left img{width: 100%;}
+    .main > .left > h4{display: none;}
+
+    .main > .right{padding: 30px 20px 0;}
+    .main > .right ul li img{width: 25%;}
+    .main > .right ul li:nth-child(2) img{width: 20%;}
+    .main > .right ul li:nth-child(4) img{width: 25%;}
+    .main > .right ul li:nth-child(5) img{width: 20%;}
+    .main > .right ul li .txt h3{font-size: 14px; height: 31px;}
+    .main > .right ul li .txt h1{margin: 10px 0 15px; font-size: 16px;}
+    .main > .right ul li .txt h1 strong{margin-top: 7px; font-size: 20px;}
+    .main > .right ul li .txt p{margin-bottom: 18px; font-size: 13px;}
+    .main > .right ul li .txt h4{font-size: 13px;}
+    .main > .right ul li:nth-child(even) .txt p{margin-bottom: 18px;}
+    .main > .right ul li:nth-child(even) .txt h4{margin-left: 0;}
+    .main > .right ul li .txt h4::before{
+    content: "";
+    position: absolute;
+    background: url(images/plus.svg);
+    width: 16px;
+    height: 16px;
+    right: -16px;
+    top: 2px;
+    background-size: cover;
+    }
+  }

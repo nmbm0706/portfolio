@@ -19,6 +19,7 @@
     $(function(){
       $(".footLast p").click(function(){
         $(".familySiteButton").toggleClass("on");
+        $(".footLast span").toggleClass("on");
       });
       $("#fullpage").fullpage({
 				// verticalCentered: true,
@@ -45,6 +46,7 @@
               $("header .inner > ul > li > p").css("color", "#000");
               $(".inner > ul > p").css("color", "#000");
               $("header .inner > ul > li > p").addClass("on");
+              // $("header .inner > ul > li > p").removeClass("on1");
             } else {
 							$(".inner .logo").html(
                 '<img src="images/HLLlogoSmallWhite.svg" alt="logosmall">'
@@ -53,6 +55,7 @@
               $("header .inner > ul > li > p").css("color", "#fff");
               $("header .inner > ul a").css("color", "#fff");
               $(".inner > ul > p").css("color", "#fff");
+              $("header .inner > ul > li > p").removeClass("on");
               // $("header .inner > ul > li > p").addClass("on1");
               // 풀페이지 바뀌었다가 다시 돌아왔을 때 영상페이지 메뉴 후버 고치기
             }

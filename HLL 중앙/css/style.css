@@ -213,6 +213,9 @@ footer .footLast span::after{
   top: 50%;
   transform: translateY(-50%);
 }
+footer .footLast span.on::after{
+  transform: rotate(180deg) translateY(5px);
+}
 
 .familySiteButton{width: 100%; padding: 60px 0; position: absolute; bottom: -55px; left: 0; background: #f7f7f7; height: 0; overflow: hidden; transition: 0.5s;}
 .familySiteButton.on{bottom: 65px; height: 70px;}
