@@ -129,10 +129,38 @@
   .s3 .layer a img{width: 100%;}
 
 
-  .s4{width: 100%; display: flex; justify-content: space-between; padding: 0;}
-  .s4 .black{background: url(../images/banner_black.png); width: 50%; height: 100%; background-size: cover; background-position: center; }
+  .s4{width: 100%; height: 200px; display: flex; justify-content: space-between; padding: 0; gap: 20px;}
+  .s4 .black{background: url(../images/banner_black.png); width: 45%; height: 100%; background-size: cover; background-position: center; padding: 0 28px; display: flex; align-items: center;}
+  .s4 .black strong{font-size: 15px; color: #ffb3c4; text-transform: uppercase; letter-spacing: 2px;}
+  .s4 .black p{font-size: 18px; color: #fff; padding: 12px 0 40px;}
 
-  .s4 .app
+  .s4 .app{background: url(../images/banner_event3.png); width: 45%; height: 100%; background-size: cover; background-position: center; padding: 0 28px; display: flex; align-items: center;}
+  .s4 .app strong{font-size: 15px; color: #fff; text-transform: uppercase; letter-spacing: 2px;}
+  .s4 .app p{font-size: 18px; color: #fff; padding: 12px 0 40px;}
+  /* 호버 하면 백그라운드 커지는 거 추가하기 */
+
+
+  .s5{width: 100%; padding: 5% 0 2%;}
+  .s5 .box{background: #000; color: #fff; display: flex; flex-direction: column; padding: 32px 27px;}
+  .s5 .box .top{display: flex; width: 100%; justify-content: space-between;}
+  .s5 .box .top span{font-size: 21px; width: 155px; height: 38px; display: block; font-weight: 600;}
+  .s5 .box .top p{display: inline-block; background: #d8d8d8; color: #000; width: 155px; height: 40px; font-size: 18px; text-align: center; line-height: 40px; font-weight: 600; cursor: pointer;}
+  .s5 .box .top input:focus{outline: none;}
+  .s5 .box .top .inp1{width: 25%; padding-left: 15px;}
+  .s5 .box .top .inp2{width: 30%; padding-left: 15px;}
+
+  .s5 .box .bot{padding: 10px 0 0 180px;}
+  /* 체크박스 체크하는 이벤트 넣기 */
+  .s5 .box .bot .checkbox{width: 16px; height: 16px; vertical-align: middle;}
+  .s5 .box .bot span{font-size: 15px; margin-left: 7px;}
+
+
+  footer{width: 100%;}
+  footer .footerTop{display: flex; justify-content: space-between; align-items: center; padding-top: 30px; margin-top: 3%; border-top: 1px solid #ccc;}
+  footer .footerTop > img{width: 186px; object-fit: contain;}
+  footer .footerTop .snsBox img{width: 34px; height: 34px; vertical-align: middle;}
+
+  footer .footerBot .txt{font-size: 10px; color: #8b8b8b; margin: 20px 0 5px;}
 
 
 
