@@ -42,6 +42,7 @@
 
   .main{display: flex; height: auto; overflow: hidden; justify-content: flex-end;}
 
+  
   .main > .left{width: 33%; position: fixed; height: 100vh; top: 80px; background: #f6c6b8; z-index: 1; left: 0;}
   .main > .left > h4{position: absolute; bottom: 120px; left: 0; font-size: 14px; color: #86260e;
     padding: 0 5% 0 7%;}

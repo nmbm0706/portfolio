@@ -58,9 +58,58 @@ header .inner > ul > li ul li{margin-bottom: 16px; white-space: nowrap;}
 header .inner > ul > li ul li:hover{color: #211955; cursor: pointer;}
 header .inner > ul > li ul li:last-child{margin-bottom: 0;}
 
+
+
 .main{width: 100%;}
-.main video{width: 100%; height: 100vh; object-fit: cover; background-size: cover; background-position: center; position: absolute; position: relative;}
-.main .txt1{position: absolute; bottom: 0; left: 50%; display: flex; flex-direction: column; justify-content: flex-end; gap: 200px; padding: 180px 40px 0; max-width: 1280px; height: 100%; margin: 0 auto; transform: translateX(-50%);}
+.main video {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.main .txt1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 200px;
+  padding: 180px 40px 0;
+  max-width: 1280px;
+  height: 100%;
+  margin: 0 auto;
+  z-index: 2;
+  background: #fff;
+  transition: 0.5s;
+}
+.main .txt1.active {
+  background: none;
+}
+.main .txt1.hide {
+  opacity: 0;
+  z-index: 0;
+}
+#fullpage .s0 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  opacity: 0;
+  transition: 0.75s;
+}
+#fullpage .s0.active {
+  opacity: 1;
+  z-index: 2;
+}
+.abouthill{width: 1280px; margin: 0 auto;}
+
 .main .txt1 .txtSub{position: absolute; top: 30%;}
 .main img{object-fit: cover;}
 .main .txt1 .txtSub img:first-child{margin-bottom: 30px;}

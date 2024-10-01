@@ -15,7 +15,7 @@
   <script src="js/jquery.fullPage.js"></script>
 	<script src="js/scrolloverflow.js"></script>
   <!-- <link rel="fullPage.js-2.9.7/examples/examples.css"> -->
-  <script>
+  <!-- <script>
     $(function(){
       $(".footLast p").click(function(){
         $(".familySiteButton").toggleClass("on");
@@ -56,17 +56,15 @@
               $("header .inner > ul a").css("color", "#fff");
               $(".inner > ul > p").css("color", "#fff");
               $("header .inner > ul > li > p").removeClass("on");
-              // $("header .inner > ul > li > p").addClass("on1");
-              // 풀페이지 바뀌었다가 다시 돌아왔을 때 영상페이지 메뉴 후버 고치기
             }
           },
 			});
     });
     
-  </script>
+  </script> -->
 </head>
 <body>
-  <header>
+  <header class="head">
     <div class="inner">
       <div class="logo">
         <img src="images/HLLlogoSmallWhite.svg" alt="logosmallW">
@@ -105,34 +103,56 @@
     </div>
   </header>
   <div id="fullpage">
-  <div class="main section">
-    <video muted data-autoplay loop>
-      <source src="images/bazaar_video.mp4" type="video/mp4">
-    </video>
-      <div class="txt1 section">
-        <div class="txtSub">
-          <img src="images/houseofLOGO.svg" alt="houseof"><br>
-          <img src="images/luxuryLifestyleLOGO.svg" alt="luxuryLifestyle">
-          <img src="images/contentCreativeGroupLOGO.svg" alt="contentCreativeGroup">
+    <div class="main section">
+      <video muted data-autoplay loop data-keepplaying id="video">
+        <source src="images/bazaar_video.mp4" type="video/mp4">
+      </video>
+        <div class="txt1 active">
+          <div class="txtSub">
+            <img src="images/houseofLOGO.svg" 
+            alt="houseof"
+            data-aos="fade-up" 
+            data-aos-delay="200"><br>
+            <img src="images/luxuryLifestyleLOGO.svg" alt="luxuryLifestyle">
+            <img src="images/contentCreativeGroupLOGO.svg" alt="contentCreativeGroup">
+          </div>
+          <p class="hll"><img src="images/HLLlogo.svg" alt="HLL"></p>
         </div>
-        <p class="hll"><img src="images/HLLlogo.svg" alt="HLL"></p>
-      </div>
-      <!-- <div class="txt2 section">
-        <div class="txtSub2">
-          <img src="https://www.hll.kr/resources/images/main/About%20HLL.svg" alt="AboutHLL">
-        </div>
-        <div class="txtBot">
-          <p>
-            HLL은 컨슈머 트렌드를 선도하는 크리에이티브 콘텐츠 하우스입니다.<br>
-            미국 최대 미디어 그룹 허스트(Hearst)사와 국내 최고의 콘텐츠 그룹 중앙그룹의 합작법인 허스트 중앙(Hearst Joongang)은 감도 높은 매거진들을 발행하며 미디어 문화를 이끌고 있습니다.<br><br>
-            HLL은 다양한 콘텐츠 제작 경험을 바탕으로 디지털 마케팅 대행, 콘텐츠 커머스, 커뮤니티 기반 서비스, 엔터테인먼트<br> 비즈니스까지 콘텐츠 파워가 필요한 다양한 영역으로 사업을 확장하고 있습니다.
-        </p>
-        <span>view more</span>
-        </div>
-      </div> -->
-  </div>
+        <!-- <div class="txt2 section">
+          <div class="txtSub2">
+            <img src="https://www.hll.kr/resources/images/main/About%20HLL.svg" alt="AboutHLL">
+          </div>
+          <div class="txtBot">
+            <p>
+              HLL은 컨슈머 트렌드를 선도하는 크리에이티브 콘텐츠 하우스입니다.<br>
+              미국 최대 미디어 그룹 허스트(Hearst)사와 국내 최고의 콘텐츠 그룹 중앙그룹의 합작법인 허스트 중앙(Hearst Joongang)은 감도 높은 매거진들을 발행하며 미디어 문화를 이끌고 있습니다.<br><br>
+              HLL은 다양한 콘텐츠 제작 경험을 바탕으로 디지털 마케팅 대행, 콘텐츠 커머스, 커뮤니티 기반 서비스, 엔터테인먼트<br> 비즈니스까지 콘텐츠 파워가 필요한 다양한 영역으로 사업을 확장하고 있습니다.
+          </p>
+          <span>view more</span>
+          </div>
+        </div> -->
+    </div>
   <!-- <div class="con">
     <div class="wrap"> -->
+      <div class="sub section s0">
+        <div class="inner">
+          <div class="abouthill">
+            <p class="top aos-init" data-aos="fade-up">About HLL</p>
+            <p class="aos-init" data-aos="fade-up" data-aos-delay="200">
+              HLL은 컨슈머 트렌드를 선도하는 크리에이티브 콘텐츠 하우스입니다.
+              미국 최대 미디어 그룹 허스트(Hearst)사와 국내 최고의 콘텐츠 그룹
+              중앙그룹의 합작법인 허스트 중앙(Hearst Joongang)은 감도 높은
+              매거진들을 발행하며 미디어 문화를 이끌고 있습니다.<br /><br />
+
+              HLL은 다양한 콘텐츠 제작 경험을 바탕으로 디지털 마케팅 대행,
+              콘텐츠 커머스, 커뮤니티 기반 서비스, 엔터테인먼트 비즈니스까지
+              콘텐츠 파워가 필요한 다양한 영역으로 사업을 확장하고 있습니다.
+            </p>
+            <span class="aos-init" data-aos="fade-up" data-aos-delay="400"
+              >view more</span>
+          </div>
+        </div>
+      </div>
       <div class="sub section s1">
         <div class="inner">
           <div class="pic">
@@ -322,6 +342,8 @@
 	<script src="js/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  
+
 
   <!-- Initialize Swiper -->
   <script>
@@ -333,14 +355,14 @@
     // });
 		AOS.init({
 			easing:"ease",
-			duration:1000,
-			offset:120,
-      once: true,
+			duration: 1000,
+			offset: 120,
 			//스크롤에 얼마나 반응할지를 설정 해당요소가 스크롤링이 120픽셀이상 진행될때 애니메이션이
 			//시작되도록 지정
 			//delay: 500,
 		});
     
   </script>
+  <script src="js/main.js"></script>
 </body>
 </html>
