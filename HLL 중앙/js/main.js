@@ -1,8 +1,11 @@
 $(function () {
+
+  
   // 메인 풀페이지
   var isFullpageInitialized = false;
   function initializeFullpage() {
     var wheelCount = 0;
+    
 
     //fullpage
     $("#fullpage").fullpage({
@@ -34,6 +37,37 @@ $(function () {
             .eq(index - 1)
             .find("[data-aos]")
             .addClass("aos-animate");
+            if (
+              index == 3 ||
+              index == 4 ||
+              index == 5 ||
+              index == 6 ||
+              index == 7 ||
+              index == 8 ||
+              index == 9 ||
+              index == 10 ||
+              index == 11 ||
+              index == 12
+            ) {
+              $(".inner .logo").html(
+                '<img src="images/HLLlogoSmall.svg" alt="HLLlogoSmall">'
+              );
+              $("header").css("background", "#fff");
+              $("header .inner > ul a").css("color", "#000");
+              $("header .inner > ul > li > p").css("color", "#000");
+              $(".inner > ul > p").css("color", "#000");
+              $("header .inner > ul > li > p").addClass("on");
+              // $("header .inner > ul > li > p").removeClass("on1");
+            } else {
+							$(".inner .logo").html(
+                '<img src="images/HLLlogoSmallWhite.svg" alt="logosmall">'
+              );
+              $("header").css("background", "transparent");
+              $("header .inner > ul > li > p").css("color", "#fff");
+              $("header .inner > ul a").css("color", "#fff");
+              $(".inner > ul > p").css("color", "#fff");
+              $("header .inner > ul > li > p").removeClass("on");
+            }
         }
       },
 

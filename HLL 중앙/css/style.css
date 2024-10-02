@@ -74,7 +74,9 @@ header .inner > ul > li ul li:last-child{margin-bottom: 0;}
 .main .txt1 {
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -98,17 +100,37 @@ header .inner > ul > li ul li:last-child{margin-bottom: 0;}
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 0;
+  left: 50%;
   right: 0;
   z-index: 1;
   opacity: 0;
   transition: 0.75s;
+  transform: translateX(-50%);
+  background: transparent;
+  width: 1280px;
+  padding: 0 40px;
+}
+.s0 .bot{padding-left: 306px; margin-top: 100px;}
+.s0 .bot p{color: #fff; font-size: 18px; font-weight: 500;}
+.s0 span{display: inline-block; height: 52px; border: 1px solid; padding-left: 24px; padding-right: 52px; line-height: 52px; text-transform: uppercase; margin-top: 32px; position: relative; font-weight: 500; cursor: pointer; color: #fff;}
+.s0 span::after{
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: url(../images/ico-more.png);
+  background-position: center;
+  background-size: cover;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 8px;
+  filter: brightness(100);
 }
 #fullpage .s0.active {
   opacity: 1;
   z-index: 2;
 }
-.abouthill{width: 1280px; margin: 0 auto;}
+.abouthill{width: 1280px; margin: 0 auto; position: relative; top: 50%; transform: translateY(-50%);}
 
 .main .txt1 .txtSub{position: absolute; top: 30%;}
 .main img{object-fit: cover;}

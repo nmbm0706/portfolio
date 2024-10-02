@@ -15,53 +15,53 @@
   <script src="js/jquery.fullPage.js"></script>
 	<script src="js/scrolloverflow.js"></script>
   <!-- <link rel="fullPage.js-2.9.7/examples/examples.css"> -->
-  <!-- <script>
+  <script>
     $(function(){
       $(".footLast p").click(function(){
         $(".familySiteButton").toggleClass("on");
         $(".footLast span").toggleClass("on");
       });
-      $("#fullpage").fullpage({
-				// verticalCentered: true,
-        scrollingSpeed: 800,
-				scrollBar: true,
-				afterLoad: function (anchorLink, index) {
-            if (
-              index == 2 ||
-              index == 3 ||
-              index == 4 ||
-              index == 5 ||
-              index == 6 ||
-              index == 7 ||
-              index == 8 ||
-              index == 9 ||
-              index == 10 ||
-              index == 11
-            ) {
-              $(".inner .logo").html(
-                '<img src="images/HLLlogoSmall.svg" alt="HLLlogoSmall">'
-              );
-              $("header").css("background", "#fff");
-              $("header .inner > ul a").css("color", "#000");
-              $("header .inner > ul > li > p").css("color", "#000");
-              $(".inner > ul > p").css("color", "#000");
-              $("header .inner > ul > li > p").addClass("on");
-              // $("header .inner > ul > li > p").removeClass("on1");
-            } else {
-							$(".inner .logo").html(
-                '<img src="images/HLLlogoSmallWhite.svg" alt="logosmall">'
-              );
-              $("header").css("background", "transparent");
-              $("header .inner > ul > li > p").css("color", "#fff");
-              $("header .inner > ul a").css("color", "#fff");
-              $(".inner > ul > p").css("color", "#fff");
-              $("header .inner > ul > li > p").removeClass("on");
-            }
-          },
-			});
+      // $("#fullpage").fullpage({
+			// 	// verticalCentered: true,
+      //   scrollingSpeed: 800,
+			// 	scrollBar: true,
+			// 	afterLoad: function (anchorLink, index) {
+      //       if (
+      //         index == 2 ||
+      //         index == 3 ||
+      //         index == 4 ||
+      //         index == 5 ||
+      //         index == 6 ||
+      //         index == 7 ||
+      //         index == 8 ||
+      //         index == 9 ||
+      //         index == 10 ||
+      //         index == 11
+      //       ) {
+      //         $(".inner .logo").html(
+      //           '<img src="images/HLLlogoSmall.svg" alt="HLLlogoSmall">'
+      //         );
+      //         $("header").css("background", "#fff");
+      //         $("header .inner > ul a").css("color", "#000");
+      //         $("header .inner > ul > li > p").css("color", "#000");
+      //         $(".inner > ul > p").css("color", "#000");
+      //         $("header .inner > ul > li > p").addClass("on");
+      //         // $("header .inner > ul > li > p").removeClass("on1");
+      //       } else {
+			// 				$(".inner .logo").html(
+      //           '<img src="images/HLLlogoSmallWhite.svg" alt="logosmall">'
+      //         );
+      //         $("header").css("background", "transparent");
+      //         $("header .inner > ul > li > p").css("color", "#fff");
+      //         $("header .inner > ul a").css("color", "#fff");
+      //         $(".inner > ul > p").css("color", "#fff");
+      //         $("header .inner > ul > li > p").removeClass("on");
+      //       }
+      //     },
+			// });
     });
     
-  </script> -->
+  </script>
 </head>
 <body>
   <header class="head">
@@ -113,10 +113,10 @@
             alt="houseof"
             data-aos="fade-up" 
             data-aos-delay="200"><br>
-            <img src="images/luxuryLifestyleLOGO.svg" alt="luxuryLifestyle">
-            <img src="images/contentCreativeGroupLOGO.svg" alt="contentCreativeGroup">
+            <img src="images/luxuryLifestyleLOGO.svg" alt="luxuryLifestyle" data-aos="fade-up" data-aos-delay="400">
+            <img src="images/contentCreativeGroupLOGO.svg" alt="contentCreativeGroup" data-aos="fade-zoom-in"  data-aos-delay="400">
           </div>
-          <p class="hll"><img src="images/HLLlogo.svg" alt="HLL"></p>
+          <p class="hll"><img src="images/HLLlogo.svg" alt="HLL" data-aos="fade-zoom-in" data-aos-delay="600" data-aos-easing="ease-in-back"></p>
         </div>
         <!-- <div class="txt2 section">
           <div class="txtSub2">
@@ -137,19 +137,22 @@
       <div class="sub section s0">
         <div class="inner">
           <div class="abouthill">
-            <p class="top aos-init" data-aos="fade-up">About HLL</p>
-            <p class="aos-init" data-aos="fade-up" data-aos-delay="200">
-              HLL은 컨슈머 트렌드를 선도하는 크리에이티브 콘텐츠 하우스입니다.
-              미국 최대 미디어 그룹 허스트(Hearst)사와 국내 최고의 콘텐츠 그룹
-              중앙그룹의 합작법인 허스트 중앙(Hearst Joongang)은 감도 높은
-              매거진들을 발행하며 미디어 문화를 이끌고 있습니다.<br /><br />
-
-              HLL은 다양한 콘텐츠 제작 경험을 바탕으로 디지털 마케팅 대행,
-              콘텐츠 커머스, 커뮤니티 기반 서비스, 엔터테인먼트 비즈니스까지
-              콘텐츠 파워가 필요한 다양한 영역으로 사업을 확장하고 있습니다.
+            <p class="top aos-init" data-aos="fade-up">
+              <img src="images/About HLL.svg" alt="aboutHLL">
             </p>
-            <span class="aos-init" data-aos="fade-up" data-aos-delay="400"
-              >view more</span>
+            <div class="bot">
+              <p class="aos-init" data-aos="fade-up" data-aos-delay="200">
+                HLL은 컨슈머 트렌드를 선도하는 크리에이티브 콘텐츠 하우스입니다.
+                미국 최대 미디어 그룹 허스트(Hearst)사와 국내 최고의 콘텐츠 그룹
+                중앙그룹의 합작법인 허스트 중앙(Hearst Joongang)은 감도 높은
+                매거진들을 발행하며 미디어 문화를 이끌고 있습니다.<br /><br />
+                HLL은 다양한 콘텐츠 제작 경험을 바탕으로 디지털 마케팅 대행,
+                콘텐츠 커머스, 커뮤니티 기반 서비스, 엔터테인먼트 비즈니스까지
+                콘텐츠 파워가 필요한 다양한 영역으로 사업을 확장하고 있습니다.
+              </p>
+              <span class="aos-init" data-aos="fade-up" data-aos-delay="400"
+                >view more</span>
+            </div>
           </div>
         </div>
       </div>
@@ -162,8 +165,8 @@
           </div>
           <div class="brand">
             <img src="images/logo-elle.svg" alt="elle" data-aos="fade-up">
-            <p data-aos="fade-up">엘르는 전 세계 45개국의 2,100만 독자와 함께하는<br>세계 최대 네트워크를 자랑하는 NO.1 패션 미디어입니다.</p>
-            <span data-aos="fade-up">view more</span>
+            <p data-aos="fade-up" data-aos-delay="200">엘르는 전 세계 45개국의 2,100만 독자와 함께하는<br>세계 최대 네트워크를 자랑하는 NO.1 패션 미디어입니다.</p>
+            <span data-aos="fade-up" data-aos-delay="400">view more</span>
           </div>
         </div>
       </div>
@@ -175,9 +178,9 @@
           </div>
           <div class="brand">
             <img src="images/logo-cosmopolitan.svg" alt="COSMOPOLITAN" data-aos="fade-up">
-            <p data-aos="fade-up">코스모폴리탄은 전 세계 22개국에 에디션을 발간하며
+            <p data-aos="fade-up" data-aos-delay="200">코스모폴리탄은 전 세계 22개국에 에디션을 발간하며
               <br>글로벌 라이프스타일을 주도하는 미디어 입니다.</p>
-            <span data-aos="fade-up">view more</span>
+            <span data-aos="fade-up" data-aos-delay="400">view more</span>
           </div>
         </div>
       </div>
@@ -190,9 +193,9 @@
           </div>
           <div class="brand">
             <img src="images/logo-BAZAAR.svg" alt="BAZAAR" data-aos="fade-up">
-            <p data-aos="fade-up">하퍼스바자는 1867년 세계 최초로 창간된 패션 매거진으로
+            <p data-aos="fade-up" data-aos-delay="200">하퍼스바자는 1867년 세계 최초로 창간된 패션 매거진으로
               <br>패션을 포함한 컬처 전반에 영감을 주는 미디어입니다.</p>
-            <span data-aos="fade-up">view more</span>
+            <span data-aos="fade-up" data-aos-delay="400">view more</span>
           </div>
         </div>
       </div>
@@ -205,9 +208,9 @@
           </div>
           <div class="brand">
             <img src="images/logo-esquire.svg" alt="ESQUIRE" data-aos="fade-up">
-            <p data-aos="fade-up">에스콰이어는 취향있고 남자들을 위한 지적인 바이블로
+            <p data-aos="fade-up" data-aos-delay="200">에스콰이어는 취향있고 남자들을 위한 지적인 바이블로
               <br>20여 개국에서 발행되고 있는 미디어입니다.</p>
-            <span data-aos="fade-up">view more</span>
+            <span data-aos="fade-up" data-aos-delay="400">view more</span>
           </div>
         </div>
       </div>
@@ -220,9 +223,9 @@
           </div>
           <div class="brand">
             <img src="images/logo-studio.svg" alt="STUDIO" data-aos="fade-up">
-            <p data-aos="fade-up">스튜디오닷은 전문성 있는 콘텐츠 개발로
+            <p data-aos="fade-up" data-aos-delay="200">스튜디오닷은 전문성 있는 콘텐츠 개발로
               <br>통합적인 마케팅 솔루션을 제공하는 크리에이터 & 마케터 그룹입니다.</p>
-            <span data-aos="fade-up">view more</span>
+            <span data-aos="fade-up" data-aos-delay="400">view more</span>
           </div>
         </div>
       </div>
@@ -234,9 +237,9 @@
           </div>
           <div class="brand">
             <img src="images/logo-yeet.png" alt="YEET" data-aos="fade-up">
-            <p data-aos="fade-up">YEET는 HLL의 기획력을 바탕으로 일상 속 작지만
+            <p data-aos="fade-up" data-aos-delay="200">YEET는 HLL의 기획력을 바탕으로 일상 속 작지만
               <br>확실한 즐거움을 줄 브랜드와 굿즈를 개발하는 취향 커머스입니다.</p>
-            <span data-aos="fade-up">view more</span>
+            <span data-aos="fade-up" data-aos-delay="400">view more</span>
           </div>
         </div>
       </div>
@@ -249,9 +252,9 @@
           </div>
           <div class="brand">
             <img src="images/logo-sublime.svg" alt="SUBLIME" data-aos="fade-up">
-            <p data-aos="fade-up">SUBLIME은 K-엔터테인먼트 콘텐츠를 기반으로
+            <p data-aos="fade-up" data-aos-delay="200">SUBLIME은 K-엔터테인먼트 콘텐츠를 기반으로
               <br>매니지먼트, 광고 제작과 대행을 진행하는 종합 엔터테인먼트 그룹입니다.</p>
-            <span data-aos="fade-up">view more</span>
+            <span data-aos="fade-up" data-aos-delay="400">view more</span>
           </div>
         </div>
       </div>
