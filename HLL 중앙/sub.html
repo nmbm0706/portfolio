@@ -5,17 +5,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>회사소개 | HLL중앙</title>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <link rel="stylesheet" href="css/styleSub.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="jquery.simplyscroll.css">
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script>
-    $(function(){
-      $(".footLast p").click(function(){
-        $(".familySiteButton").toggleClass("on");
-        $(".footLast span").toggleClass("on");
-      });
-    });
-  </script>
+  <script src="jquery.simplyscroll.js"></script>
+ 
 </head>
 <body>
   <header>
@@ -84,15 +80,17 @@
       <p>HLL은 미국 최대 미디어 그룹 허스트(Hearst) 사와 합작법인인 허스트중앙을 통해 엘르,<br> 코스모폴리탄, 하퍼스 바자, 에스콰이어를 발행하고 있습니다. HLL은 다년간의 패션, 뷰티,<br> 라이프스타일 콘텐츠 제작 노하우를 토대로 스튜디오닷을 설립, 고객사 온·오프라인 콘텐츠<br> 제작 및 광고 마케팅 대행 사업을 전개하고 있습니다.</p>
       <p>2022년 HLL과 함께하게 된 써브라임(Sublime)은 연예 매니지먼트를 시작으로 광고 제작 및<br> 대행, 포토그래퍼와 모델 에이전시로 영역을 확장하며 종합 엔터테인먼트사로 거듭나고<br> 있습니다. 써브라임의 대표 아티스트로는 배우 송강호와 고소영, 가수 잭슨과 티파니 영 등이<br> 있습니다.</p>
     </div>
-    <ul class="moveBrand">
-      <li><img src="images/logo_elle.png" alt="elle"></li>
-      <li><img src="images/logo_cosmopolitan.png" alt="COSMOPOLITAN"></li>
-      <li><img src="images/logo_bazaar.png" alt="bazaar"></li>
-      <li><img src="images/logo_esquire.png" alt="ESQUIRE"></li>
-      <li><img src="images/logo_studio.png" alt="STUDIO"></li>
-      <li><img src="images/logo_yeet.png" alt="yeet"></li>
-      <li><img src="images/logo_sublime.png" alt="Sublime"></li>
-    </ul>
+    <div class="slide">
+      <ul class="moveBrand scroller">
+        <li><img src="images/logo_elle.png" alt="elle"></li>
+        <li><img src="images/logo_cosmopolitan.png" alt="COSMOPOLITAN"></li>
+        <li><img src="images/logo_bazaar.png" alt="bazaar"></li>
+        <li><img src="images/logo_esquire.png" alt="ESQUIRE"></li>
+        <li><img src="images/logo_studio.png" alt="STUDIO"></li>
+        <li><img src="images/logo_yeet.png" alt="yeet"></li>
+        <li><img src="images/logo_sublime.png" alt="Sublime"></li>
+      </ul>
+    </div>
   </div>
   <div class="main3">
     <div class="dep1">
@@ -216,6 +214,28 @@
   </footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    $(function(){
+      $(".footLast p").click(function(){
+        $(".familySiteButton").toggleClass("on");
+        $(".footLast span").toggleClass("on");
+      });
+// $(".slide").append($(".scroller").eq(0).clone());
+      let wd = $(".scroller").width()*$(".scroller").length;
+      
+      // const tl = gsap.timeline({repeat: -1});
+      
+      // tl.to(".scroller", {
+      //   x: -wd,
+      //   duration: 50,
+      //   ease: "linear",
+      // });
+      $(".scroller").simplyScroll({
+       // direction:'backwards',
+        frameRate: 60,
+    });
+    });
+  </script>
   <script>
     AOS.init({
 			easing:"ease",
