@@ -158,20 +158,20 @@ a{text-decoration: none;}
   100%{transform: translateX(0);}
 }
 
-#wrap .gallery{width: 100%; height: 925px; display: flex; margin-top: 1625px; position: relative;
-  gap: 30px; overflow: hidden; animation:  30s infinite; text-align: center;}
-#wrap .gallery > div{width: 712px; height: 680px; border-radius: 10px; box-sizing: border-box; position: relative;}
+#wrap .gallery{width: 100%; height: 925px;}
+#wrap .gallery .scroller{display: flex; margin-top: 1625px; position: relative; gap: 30px; text-align: center;}
+#wrap .gallery .scroller > div{width: 712px; height: 680px; border-radius: 10px; box-sizing: border-box; position: relative;}
 #wrap .gallery img{border-radius: 10px;}
-#wrap .gallery > div:first-child{margin-top: 44px;}
-#wrap .gallery > div:nth-child(2){}
-#wrap .gallery > div:nth-child(3){margin-top: 114px;}
-#wrap .gallery > div:nth-child(4){}
-#wrap .gallery > div:nth-child(5){margin-top: 18px;}
-#wrap .gallery > div:nth-child(6){margin-top: 74px;}
+#wrap .gallery .scroller > div:first-child{margin-top: 44px;}
+#wrap .gallery .scroller > div:nth-child(2){}
+#wrap .gallery .scroller > div:nth-child(3){margin-top: 114px;}
+#wrap .gallery .scroller > div:nth-child(4){}
+#wrap .gallery .scroller > div:nth-child(5){margin-top: 18px;}
+#wrap .gallery .scroller > div:nth-child(6){margin-top: 74px;}
 
-#wrap .gallery > div .black{background: rgba(0, 0, 0, 0.5); width: 100%; height: 100%; 
+#wrap .gallery .scroller > div .black{background: rgba(0, 0, 0, 0.5); width: 100%; height: 100%; 
   position: absolute; top: 0; left: 0; transition: 0.5s; opacity: 1;}
-#wrap .gallery > div:hover .black{opacity: 0;}
+#wrap .gallery .scroller > div:hover .black{opacity: 0;}
 
 #wrap .gotog div{width: 210px; height: 60px; margin: 0 auto; position: relative;
   border-radius: 10px; border: 1px solid #666; overflow: hidden; margin-top: 95px;}

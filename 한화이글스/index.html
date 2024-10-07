@@ -7,6 +7,10 @@
   <title>한화이글스</title>
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <link rel="stylesheet" href="jquery.simplyscroll.css">
+  <script src="jquery.simplyscroll.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <style>
     .main .swiper-scrollbar{cursor: pointer;}
   </style>
@@ -140,38 +144,40 @@
       <div class="swiper-scrollbar"></div>
       <!-- 스크롤바 만들 -->
     </div>
-    <div class="gallery">
-      <div>
-        <img src="images/players.png" alt="players">
-        <div class="black"></div>
-      </div>
-      <div>
-        <img src="images/hwangjunseo.png" alt="hwangjunseo">
-        <div class="black"></div>
-      </div>
-      <div>
-        <img src="images/rohsihwan.png" alt="rohsihwan">
-        <div class="black"></div>
-      </div>
-      <div>
-        <img src="images/kimkangmin.png" alt="kimkangmin">
-        <div class="black"></div>
-      </div>
-      <div>
-        <img src="images/chaeeunseong.png" alt="chaeeunseong">
-        <div class="black"></div>
-      </div>
-      <div>
-        <img src="images/perlasa.png" alt="perlasa">
-        <div class="black"></div>
-      </div>
-      <div>
-        <img src="images/ryuhyunjin.png" alt="ryuhyunjin">
-        <div class="black"></div>
-      </div>
-      <div>
-        <img src="images/moondongju.png" alt="moondongju">
-        <div class="black"></div>
+    <div class="gallery slide">
+      <div class="scroller">
+        <div>
+          <img src="images/players.png" alt="players">
+          <div class="black"></div>
+        </div>
+        <div>
+          <img src="images/hwangjunseo.png" alt="hwangjunseo">
+          <div class="black"></div>
+        </div>
+        <div>
+          <img src="images/rohsihwan.png" alt="rohsihwan">
+          <div class="black"></div>
+        </div>
+        <div>
+          <img src="images/kimkangmin.png" alt="kimkangmin">
+          <div class="black"></div>
+        </div>
+        <div>
+          <img src="images/chaeeunseong.png" alt="chaeeunseong">
+          <div class="black"></div>
+        </div>
+        <div>
+          <img src="images/perlasa.png" alt="perlasa">
+          <div class="black"></div>
+        </div>
+        <div>
+          <img src="images/ryuhyunjin.png" alt="ryuhyunjin">
+          <div class="black"></div>
+        </div>
+        <div>
+          <img src="images/moondongju.png" alt="moondongju">
+          <div class="black"></div>
+        </div>
       </div>
     </div>
     <div class="gotog">
@@ -361,6 +367,24 @@
         draggable: true,
       },
     });
+    let wd = $(".scroller").width()*$(".scroller").length;
+      
+      $(".slide").append($(".scroller").eq(0).clone());
+      const tl = gsap.timeline({repeat: -1});
+      
+      tl.to(".scroller", {
+        x: -wd,
+        duration: 60,
+        ease: "linear",
+      });
+      $(".slide").hover(
+        function(){
+          tl.pause();
+        },
+        function(){
+          tl.play();
+        }
+      );
   </script>
 </body>
 </html>
