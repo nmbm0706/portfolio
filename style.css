@@ -35,13 +35,14 @@ body{height: auto; padding-bottom: 250px;}
 #wrap .profile .sub .box2{background: #fff; position: relative; color: #6e6e73;}
 #wrap .profile .sub .box2:hover h1, #wrap .profile .sub .box2:hover h2, #wrap .profile .sub .box2:hover h3, #wrap .profile .sub .box2:hover h4, #wrap .profile .sub .box2:hover h5, #wrap .profile .sub .box2:hover h6{color: #1d1d1f;}
 #wrap .profile .sub .box2 h1{position: absolute; top: 50%; left: 47%; transform: translate(-50%, -50%); font-size: 30px; transition: 0.3s;}
-#wrap .profile .sub .box2 h2{position: absolute; top: 55%; left: 63%; font-size: 30px; transition: 0.3s;}
-#wrap .profile .sub .box2 h3{position: absolute; top: 20%; left: 53%; font-size: 25px; transition: 0.3s;}
-#wrap .profile .sub .box2 h4{position: absolute; top: 65%; left: 10%; font-size: 20px; transition: 0.3s;}
-#wrap .profile .sub .box2 h5{position: absolute; top: 80%; left: 45%; font-size: 20px; transition: 0.3s;}
-#wrap .profile .sub .box2 h6{position: absolute; top: 25%; left: 10%; font-size: 30px; transition: 0.3s;}
+#wrap .profile .sub .box2 h2{position: absolute; top: 45%; left: 65%; font-size: 30px; transition: 0.3s;}
+#wrap .profile .sub .box2 h3{position: absolute; top: 10%; left: 50%; font-size: 25px; transition: 0.3s;}
+#wrap .profile .sub .box2 h4{position: absolute; top: 60%; left: 10%; font-size: 20px; transition: 0.3s;}
+#wrap .profile .sub .box2 h5{position: absolute; top: 70%; left: 45%; font-size: 20px; transition: 0.3s;}
+#wrap .profile .sub .box2 h6{position: absolute; top: 15%; left: 10%; font-size: 30px; transition: 0.3s;}
 
 #wrap .profile .sub .box3{background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(94,94,94,1) 100%); color: #fff; position: relative;}
+#wrap .profile .sub .box3 a{color: #fff; width: 100%; height: 100%; display: block;}
 #wrap .profile .sub .box3 h1{position: absolute; left: 10%; top: 10%;}
 #wrap .profile .sub .box3 p{position: absolute; bottom: 28px; right: 60px; font-size: 25px; font-weight: bold;}
 #wrap .profile .sub .box3 span{position: absolute; bottom: 20px; right: 20px;}
@@ -57,6 +58,7 @@ body{height: auto; padding-bottom: 250px;}
 #wrap .main .page .left p img{width: 100%; vertical-align: middle;}
 #wrap .main .page .right{width: 35%; display: flex; flex-direction: column; height: 300px; justify-content: space-between; color: #fff;}
 #wrap .main .page .right .txt{display: flex; flex-direction: column; gap: 10px;}
+#wrap .main .page .right .txt h1{margin-bottom: 20px;}
 #wrap .main .page .right .txt h2{padding-left: 20px; position: relative;}
 #wrap .main .page .right .txt h2::after{
   content: "";
@@ -80,7 +82,7 @@ body{height: auto; padding-bottom: 250px;}
 #wrap .main .first .left p:nth-child(3){width: 300px; top: 50%; left: 450px; transform: translateY(-23%);}
 
 
-#wrap .main .second{height: 600px; background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,102,0,1) 100%); position: relative;}
+#wrap .main .second{height: 600px; background: linear-gradient(0deg, rgba(117,65,38,1) 0%, rgba(255,102,0,1) 100%); position: relative;}
 #wrap .main .second .left p{overflow: hidden; border-radius: 20px; position: absolute; width: 500px; top: 50%; left: 100px; transform: translateY(-50%);}
 
 #wrap .main .third{height: 600px; background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 100%); position: relative;}
