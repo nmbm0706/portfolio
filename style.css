@@ -3,13 +3,13 @@
 
 @font-face {
   font-family: title;
-  src: url(webfonts/apple/sf-pro-display_medium.woff2) format("woff");
+  src: url(webfonts/apple/sf-pro-display_medium.woff2) format("woff2");
 }
 @font-face {
   font-family: subtitle;
   src: url(webfonts/YoonGothicPro745_107.woff) format("woff");
 }
-*{margin: 0; padding: 0; font-family: title;}
+*{margin: 0; padding: 0;}
 a{text-decoration: none;}
 body{height: auto; padding-bottom: 250px;}
 #wrap .intro{width: 100%; height: 900px; position: relative;}
@@ -18,9 +18,16 @@ body{height: auto; padding-bottom: 250px;}
 #wrap .intro h1 span{color: #1d1d1f;}
 #wrap .intro h1 strong{font-weight: 700;}
 #wrap .intro h2{color: #777; font-weight: normal; font-size: 20px; margin-top: 30px;}
+#wrap .intro h3{position: absolute; bottom: 250px; font-size: 200px; right: 0; font-weight: bold;color: #333;}
+#wrap .intro h3 span{-webkit-text-stroke: 1.5px #5f5f5f; color: #fff;}
 
-#wrap .profile{width: 100%; max-width: 1200px; height: 900px; margin: 0 auto;}
-#wrap .profile > h1{color: #6e6e73; width: 100%; max-width: 1200px; }
+#wrap .intro .emoji{display: flex; position: absolute; top: -30px; left: 580px;}
+#wrap .intro .emoji h4{width: 50px;}
+#wrap .intro .emoji h4:last-child{width: 50px;}
+#wrap .intro .emoji h4 img{width: 100%;}
+
+#wrap .profile{width: 100%; max-width: 1200px; height: 900px; margin: 0 auto; font-family: title;}
+#wrap .profile > h1{color: #6e6e73; width: 100%; max-width: 1200px;}
 #wrap .profile > h1 span{color: #1d1d1f;}
 
 #wrap .profile .sub{display: flex; width: 1200px; gap: 20px; margin: 0 auto;}
@@ -51,7 +58,7 @@ body{height: auto; padding-bottom: 250px;}
 #wrap .profile .sub .right{width: 70%; height: 100%; background: #777;}
 
 /* .main .page 공통 */
-#wrap .main{width: 100%; height: auto; max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 250px;}
+#wrap .main{width: 100%; height: auto; max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 250px; font-family: title;}
 #wrap .main .page{width: 100%; max-width: 1200px; border-radius: 20px; box-shadow: 2px 4px 12px #ccc; display: flex; align-items: center;}
 #wrap .main .page .right .btn p a:first-child{color: #fff; background: #1140c8;}
 #wrap .main .page .left{width: 60%; margin: 0 auto; padding-top: 40px;}
@@ -71,8 +78,8 @@ body{height: auto; padding-bottom: 250px;}
   height: 5px;
   border-radius: 50%;
 }
-#wrap .main .page .right .btn p{display: flex; justify-content: space-between; width: 165px;}
-#wrap .main .page .right .btn p a{display: inline-block; border: 1px solid #1140c8; border-radius: 50px; padding: 5px 15px; color: #1140c8;}
+#wrap .main .page .right .btn p{display: flex; justify-content: space-between; width: 230px;}
+#wrap .main .page .right .btn p a{display: inline-block; border: 1px solid #1140c8; border-radius: 50px; padding: 7px 15px; color: #1140c8;}
 /* ------------------------ */
 
 #wrap .main .first{height: 600px; background: linear-gradient(180deg, rgba(57,214,255,1) 0%, rgba(240,215,215,1) 100%); position: relative;}
@@ -88,5 +95,5 @@ body{height: auto; padding-bottom: 250px;}
 #wrap .main .third{height: 600px; background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 100%); position: relative;}
 #wrap .main .third .left p{overflow: hidden; border-radius: 20px; position: absolute; width: 500px; top: 50%; left: 100px; transform: translateY(-50%);}
 
-#wrap .up{background: #000; display: inline-block; border-radius: 50%; width: 30px; margin: 0 auto; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);}
+#wrap .up{background: #000; display: inline-block; border-radius: 50%; width: 30px; margin: 0 auto; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); font-family: title;}
 #wrap .up a img{vertical-align: middle; width: 100%;}
