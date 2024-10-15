@@ -134,7 +134,7 @@
       transition: all 0.3s ease;
       opacity: 0;
       z-index: 2;
-      height: 70%;
+      height: 67%;
   }
   .s1 .news .layer a:hover:before{
       opacity: 1;

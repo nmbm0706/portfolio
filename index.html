@@ -9,9 +9,18 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <style>
-    
-  </style>
+  <script>
+    $(function(){
+      $("#wrap .up").click(function(e){
+        e.preventDefault();
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: 'smooth',
+        });
+      });
+    });
+  </script>
 </head>
 <body>
   <div id="wrap">
@@ -114,7 +123,7 @@
       </div>
     </div>
     <div class="up">
-      <a href="#wrap"><img src="images/arrow.svg" alt="arrow"></a>
+      <a href="#"><img src="images/arrow.svg" alt="arrow"></a>
     </div>
   </div>
   <script>
